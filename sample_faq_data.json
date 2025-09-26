@@ -1,0 +1,42 @@
+{
+  "business_hours": {
+    "keywords": ["hours", "open", "closed", "time", "schedule", "when"],
+    "response": "Our business hours are Monday to Friday: 9:00 AM - 6:00 PM, Saturday: 10:00 AM - 4:00 PM. We are closed on Sundays and public holidays."
+  },
+  "contact_info": {
+    "keywords": ["contact", "phone", "email", "address", "reach", "call"],
+    "response": "You can reach us at:\n📞 Phone: +1 (555) 123-4567\n📧 Email: info@company.com\n📍 Address: 123 Business Street, City, State 12345"
+  },
+  "pricing": {
+    "keywords": ["price", "cost", "fee", "charge", "payment", "expensive", "cheap"],
+    "response": "Our pricing varies based on your specific needs. We offer competitive rates with flexible payment options. Please contact our sales team for a personalized quote tailored to your requirements."
+  },
+  "services": {
+    "keywords": ["service", "offer", "provide", "do", "help", "support"],
+    "response": "We offer a comprehensive range of services including:\n• Consulting and Strategy\n• Implementation Support\n• 24/7 Customer Service\n• Training and Documentation\n• Maintenance and Updates"
+  },
+  "delivery": {
+    "keywords": ["delivery", "shipping", "timeline", "when", "how long", "receive"],
+    "response": "Standard delivery takes 3-5 business days. Express delivery (1-2 business days) is available for an additional fee. Digital products are delivered instantly upon payment confirmation."
+  },
+  "refund_policy": {
+    "keywords": ["refund", "return", "money back", "cancel", "satisfaction"],
+    "response": "We offer a 30-day money-back guarantee on all our services. If you're not completely satisfied, contact us within 30 days for a full refund. Digital products have a 7-day refund policy."
+  },
+  "technical_support": {
+    "keywords": ["technical", "support", "help", "problem", "issue", "bug", "error"],
+    "response": "Our technical support team is available 24/7 to assist you. You can:\n• Submit a ticket through our support portal\n• Call our technical hotline: +1 (555) TECH-HELP\n• Chat with us live on our website\n• Email: support@company.com"
+  },
+  "partnership": {
+    "keywords": ["partner", "collaboration", "work together", "joint", "alliance"],
+    "response": "We're always interested in strategic partnerships! Please send your partnership proposal to partnerships@company.com or schedule a meeting with our business development team."
+  },
+  "about_company": {
+    "keywords": ["about", "company", "who", "what", "history", "founded"],
+    "response": "We are a leading technology company founded in 2020, specializing in innovative solutions for businesses worldwide. Our mission is to help companies streamline their operations and improve customer satisfaction through cutting-edge technology."
+  },
+  "careers": {
+    "keywords": ["career", "job", "hiring", "work", "employment", "position"],
+    "response": "We're always looking for talented individuals to join our team! Check out our current job openings at careers@company.com or visit our careers page. We offer competitive salaries, flexible work arrangements, and excellent benefits."
+  }
+}

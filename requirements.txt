@@ -1,0 +1,16 @@
+# FAQgirl Requirements
+# This project uses only Python standard library modules
+# No additional packages need to be installed
+
+# Python >= 3.6 is recommended for optimal performance
+# The following standard library modules are used:
+# - json (for FAQ data loading)
+# - difflib (for text similarity matching) 
+# - typing (for type hints)
+# - time (for demo delays)
+# - sys (for interactive demo)
+
+# For development/testing (optional):
+# pytest>=6.0.0
+# black>=21.0.0
+# flake8>=3.8.0
