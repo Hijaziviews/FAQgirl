@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animated FAQ Girl Sample</title>
+  <style>
+    body { background: #f5f6fa; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh;}
+    .caption { font-family: sans-serif; font-size: 1.2em; margin-top: 1em; color: #444;}
+  </style>
+</head>
+<body>
+  <svg id="girl-face" width="200" height="240" xmlns="http://www.w3.org/2000/svg">
+    <!-- Face outline -->
+    <ellipse cx="100" cy="120" rx="70" ry="90" fill="#ffd1b8"/>
+    <!-- Hair (top) -->
+    <ellipse cx="100" cy="60" rx="80" ry="50" fill="#704214"/>
+    <!-- Hair (sides) -->
+    <ellipse cx="30" cy="130" rx="20" ry="50" fill="#704214"/>
+    <ellipse cx="170" cy="130" rx="20" ry="50" fill="#704214"/>
+    <!-- Eyes -->
+    <ellipse id="eyeL" cx="75" cy="115" rx="13" ry="7" fill="#fff"/>
+    <ellipse id="eyeR" cx="125" cy="115" rx="13" ry="7" fill="#fff"/>
+    <!-- Pupils -->
+    <ellipse cx="75" cy="115" rx="4" ry="4" fill="#222"/>
+    <ellipse cx="125" cy="115" rx="4" ry="4" fill="#222"/>
+    <!-- Eyelids (for blinking animation) -->
+    <ellipse id="lidL" cx="75" cy="115" rx="13" ry="7" fill="#ffd1b8" opacity="0"/>
+    <ellipse id="lidR" cx="125" cy="115" rx="13" ry="7" fill="#ffd1b8" opacity="0"/>
+    <!-- Smile (animated by default) -->
+    <path id="smile" d="M85,160 Q100,180 115,160" stroke="#e97878" stroke-width="4" fill="none"/>
+    <!-- Mouth (talking shape) -->
+    <ellipse id="mouth" cx="100" cy="160" rx="9" ry="4" fill="#e97878"/>
+    <!-- Nose -->
+    <ellipse cx="100" cy="135" rx="8" ry="4" fill="#fbb68a"/>
+    <!-- Blush -->
+    <ellipse cx="60" cy="140" rx="8" ry="4" fill="#ffbebe" opacity="0.6"/>
+    <ellipse cx="140" cy="140" rx="8" ry="4" fill="#ffbebe" opacity="0.6"/>
+  </svg>
+  <div class="caption">Hi, I can answer your frequently asked questions!</div>
+<script>
+  // Blinking animation
+  function blink() {
+    document.getElementById('lidL').setAttribute('opacity', 1);
+    document.getElementById('lidR').setAttribute('opacity', 1);
+    setTimeout(() => {
+      document.getElementById('lidL').setAttribute('opacity', 0);
+      document.getElementById('lidR').setAttribute('opacity', 0);
+    }, 150);
+  }
+  setInterval(() => {
+    blink();
+  }, 2200 + Math.random() * 1000);
+
+  // Mouth movement (simulated talking)
+  function talk() {
+    document.getElementById('mouth').setAttribute('ry', 10); // open mouth
+    setTimeout(() => {
+      document.getElementById('mouth').setAttribute('ry', 4); // close mouth
+    }, 200);
+  }
+  setInterval(() => {
+    talk();
+  }, 700);
+
+  // Optional: Animate smiling (wiggle the smile path)
+  let smileToggle = false;
+  setInterval(() => {
+    document.getElementById('smile').setAttribute(
+      'd',
+      smileToggle
+        ? 'M85,160 Q100,180 115,160'
+        : 'M85,158 Q100,178 115,158'
+    );
+    smileToggle = !smileToggle;
+  }, 1300);
+
+  // Start with a blink and a mouth movement
+  window.onload = function() {
+    blink();
+    talk();
+  };
+</script>
+</body>
+</html>
